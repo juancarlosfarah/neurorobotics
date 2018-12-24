@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<experiment-list>
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck Husky Braitenberg experiment with SpiNNaker</name>
+    <thumbnail>ExDSpiNNakerExample.jpg</thumbnail>
+    <description>This is a SpiNNaker compatible version of the Braitenberg Brain Husky Experiment in
+      the holodeck.
+    </description>
+    <tags>holodeck Husky braitenberg spinnaker robotics</tags>
+    <timeout>6000</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDSpiNNakerExample.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="1.0" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2_spinnaker_python_tf.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Tutorial baseball experiment - Exercise</name>
+    <thumbnail>ExDTutorialBaseball.jpg</thumbnail>
+    <description>
+      This guided experiment will walk you through all the features of the Neurorobotics Platform.
+      Launch it and follow the instructions provided in the jupyter notebook located in the
+      Experiments/tutorial_baseball_exercise folder.
+    </description>
+    <tags>icub robotics tutorial exercise baseball tutorial</tags>
+    <timeout>86400</timeout>
+    <configuration type="3d-settings" src="ExDTutorialBaseball.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTutorialBaseball.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.624" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="tutorial_baseball.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="BallThrowingMachine"
+        src="throw_ball.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="2.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template HoLLie arm in empty environment</name>
+    <thumbnail>ExDTemplateManipulation.jpg</thumbnail>
+    <description>Loads a custom build robot model of a table and one of the HoLLie robot arms with
+      the hand fixed to it.
+    </description>
+    <tags>template hollie robotics arm empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplateManipulation.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateManipulation.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.04" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="template_manipulation.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>My Leg 01</name>
+    <thumbnail>ExDTutorialBaseball.jpg</thumbnail>
+    <description>first custom setup with leg mechanics</description>
+    <tags>legs tryout</tags>
+    <timeout>86400.0</timeout>
+    <configuration src="ExDTutorialBaseball.3ds" type="3d-settings"/>
+    <configuration src="brainvisualizer.json" type="brainvisualizer"/>
+    <configuration src="ExDTutorialBaseball.uis" type="user-interaction-settings"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose theta="0.0" ux="0.0" uy="0.0" uz="0.0" x="0.0" y="0.0" z="0.0"/>
+    </environmentModel>
+    <bibiConf src="bibi_configuration.bibi"/>
+    <experimentControl>
+      <stateMachine id="BallThrowingMachine" src="BallThrowingMachine.exd"
+        xsi:type="SMACHStateMachine"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="-0.5" y="-3.5" z="1.8"/>
+      <cameraLookAt x="0.0" y="0.0" z="2.0"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>HoLLiE hand motion with CPG in holodeck</name>
+    <thumbnail>ExDManipulation.jpg</thumbnail>
+    <description>This experiment shows a basic implementation of CPG driven motion control for a
+      five-finger robotic hand.
+      The transfer functions implement a simple muscle model.
+    </description>
+    <tags>hollie hand cpg holodeck</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDManipulation.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDManipulation.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.025" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="manipulation.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-1.05711" y="2.06968" z="2.08684"/>
+      <cameraLookAt x="0.0" y="0.231642" z="1.199802"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template Husky in empty environment</name>
+    <thumbnail>ExDTemplateHusky.jpg</thumbnail>
+    <description>This experiment loads the Husky robot in an empty world, with an idle brain and
+      basic transfer functions. You are free to edit it.
+    </description>
+    <tags>template husky robotics empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplateHusky.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateHusky.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="template_husky.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+  ﻿
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck Husky Braitenberg experiment with automatically switching screens</name>
+    <thumbnail>ScreenSwitchingHuskyExperiment.jpg</thumbnail>
+    <description>This experiment is similar to the Husky Braitenberg one in the Holodeck
+      (Husky robot detecting red colour and driving towards it).
+      In this experiment the right screen is turned red automatically after 20 seconds of
+      simulation time. Also, the robot reaching a red screen triggers on the opposite screen.
+      This is to demonstrate how, using the SMACH state machine script, the user can
+      automate the experiment events.
+    </description>
+    <tags>husky robotics braitenberg screen holodeck</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ScreenSwitchingHuskyExperiment.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ScreenSwitchingHuskyExperiment.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="HuskyAwareScreenControlling"
+        src="screen_switching_husky_aware_compatible.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="5.056825994369357" y="-1.0210998541555323" z="2.697598759953974"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky with neuronal red detection</name>
+    <thumbnail>NeuronalRedDetection_Husky.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics and the virtual room
+      environment. If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. The
+      color detection is done with a neuronal image recognition. Then, the robot will move towards
+      the colored object. In this experiment, the user can interact and change the color of both
+      screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky robotics visual virtualroom braitenberg neuronal</tags>
+    <timeout>1680</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="neuronalRedDetection.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ExDConfFile.xsd">
+    <name>iCub robot with Dynamic Vision Sensor (DVS) demo</name>
+    <thumbnail>ExDDvsIcub.jpg</thumbnail>
+    <description>This experiment contains an iCub robot equipped with one simulated Dynamic Vision
+      Sensors and another iCub robot that is waving periodically its left or right hand.
+      The iCub with a DVS tries to replicate the hand motion of the other one.
+    </description>
+    <tags>icub visual dvs vision robotics empty</tags>
+    <timeout>180</timeout>
+    <configuration type="3d-settings" src="ExDDvsIcub.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDDvsIcub.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="tracking_world/tracking_world.sdf">
+      <robotPose x="0.0" y="-0.5" z="0.63" roll="0.0" pitch="0.0" yaw="-1.57079632679"/>
+    </environmentModel>
+    <bibiConf src="DVSIcub.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="IcubBehaviorSwitch"
+        src="icub_behavior_switch.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="2.5" y="2.5" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck Force based joint control</name>
+    <thumbnail>ExDManipulationForce.jpg</thumbnail>
+    <description>The experiment shows a simple example of force based spiking interface for a Schunk
+      SVH robotic hand. Two joints of the index finger are being controlled by two motor neurons
+      (antagonist and synergist) to reach a desired position, which is adjustable in the transfer
+      function. A simple muscle model converts activation dynamics to joint efforts and applies them
+      in a physics simulator. The rest of the 8 joints (2 for each finger) are maintaining zero
+      positions with traditional PID controllers and do not move at all. The experiment demonstrates
+      one of the possible mechanisms for implementing force based control using existing Gazebo/ROS
+      NRP platform architecture, opening the path to more complex muscle model simulations in the
+      future.
+    </description>
+    <tags>holodeck force based joint control robotics</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDManipulationForce.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDManipulationForce.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.025" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="manipulation_force.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="IndexFingerForceControl"
+        src="manipulation_arm_robot_force.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="-1.05711" y="2.06968" z="2.08684"/>
+      <cameraLookAt x="0.0" y="0.231642" z="1.199802"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>LAURON V Braitenberg experiment in the SpaceBotCup 2013 arena</name>
+    <thumbnail>ExDBraitenbergLauronSBC.jpg</thumbnail>
+    <description>This experiment loads the six-legged walking robot LAURON V (developed at FZI) and
+      the arena from the SpaceBotCup 2013. If the user starts the experiment, the Braitenberg
+      vehicle network is executed and the robot will turn around itself in place, until the camera
+      detects a red color. Then, the robot will move towards the colored object. In this experiment,
+      the user can interact and change the color of both screens by clicking on them with the right
+      mouse button.
+    </description>
+    <tags>lauron braitenberg spacebotcup robotics</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDBraitenbergLauronSBC.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="spacebotcup_world/spacebotcup_world.sdf">
+      <robotPose x="0.0" y="0.0" z="1.25" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="braitenberg_lauron.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-2.95" y="-17.30" z="3"/>
+      <cameraLookAt x="10" y="12" z="-5"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Docked Mouse v2 experiment</name>
+    <thumbnail>ExDDockedMouse.jpg</thumbnail>
+    <description>This experiment loads the Mouse in an empty world, with an idle brain and the
+      docked walking controller.
+    </description>
+    <tags>mouse biological old empty</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDDockedMouse.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.8" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="docked_mouse_v2.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Tutorial baseball experiment - Solution</name>
+    <thumbnail>ExDTutorialBaseball.jpg</thumbnail>
+    <description>
+      This guided experiment will walk you through all the features of the Neurorobotics Platform.
+      Launch it and follow the instructions provided in the jupyter notebook located in the
+      Experiments/tutorial_baseball_exercise/ folder.
+    </description>
+    <tags>icub robotics tutorial solution baseball</tags>
+    <timeout>86400</timeout>
+    <configuration type="3d-settings" src="ExDTutorialBaseball.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTutorialBaseball.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.624" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="tutorial_baseball.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="BallThrowingMachine"
+        src="throw_ball.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="2.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>2 DOF NST Myorobotics Arm for WP4 Cerebellum Experiment</name>
+    <thumbnail>Myo_NST.jpg</thumbnail>
+    <description>Loads the 2 DOF Myorobotics Arm into the Holodeck. Muscles can be controlled via
+      ROS messages.
+    </description>
+    <timeout>1000000000</timeout>
+    <configuration type="3d-settings" src="holodeck.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="holodeck.uis"/>
+
+    <maturity>development</maturity>
+    <environmentModel src="cdp1_world/cdp1_world_holodeck.sdf">
+      <robotPose x="-1" y="-4.0" z="0.1" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+
+    <bibiConf src="Myo_NST.bibi"/>
+
+    <cameraPose>
+      <cameraPosition x="1.650596943953666" y="-1.3037450422457924" z="1.3963657402299325 "/>
+      <cameraLookAt x="1.51587" y="-1.0442" z="1.33757"/>
+    </cameraPose>
+
+    <physicsEngine>opensim</physicsEngine>
+    <gzbridgesettings>
+      <pose_update_delta_translation>1.e-12</pose_update_delta_translation>
+      <pose_update_delta_rotation>1.e-12</pose_update_delta_rotation>
+      <pose_update_early_threshold>0.02</pose_update_early_threshold>
+    </gzbridgesettings>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck iCub Visual Tracking experiment</name>
+    <thumbnail>ExDVisualTrackingICub.jpg</thumbnail>
+    <description>In this experiment the iCub robot performs a Visual Tracking task in the
+      Holodeck.
+    </description>
+    <tags>icub robotics visual holodeck</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDVisualTrackingICub.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDVisualTrackingICub.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room/virtual_room_tracking_icub.sdf">
+      <robotPose x="0.0" y="0.0" z="0.644" roll="0.0" pitch="0.0" yaw="-1.570796"/>
+    </environmentModel>
+    <bibiConf src="visual_tracking_icub.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0.0" y="1.48" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Empty Template MMM experiment</name>
+    <thumbnail>ExDTemplateMMM.png</thumbnail>
+    <description>This experiment loads the MMM model in an empty world, with an idle brain and basic
+      transfer functions. You are free to edit it.
+    </description>
+    <tags>template mmm empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplateMMM.json"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateMMM.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.556" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="template_mmm.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2" y="0" z="1"/>
+      <cameraLookAt x="0" y="0" z="0.1"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Tutorial - TensorFlow Husky Braitenberg Experiment</name>
+    <thumbnail>TensorFlowTutorial.jpg</thumbnail>
+    <description>This experiment was presented as a tutorial at the CodeJam 2017 event. It
+      demonstrates using TensorFlow within the NRP for semantic object segmentation/detection
+      in conjunction with the spiking neuron Braitenberg brain for object level interaction.
+      Find more information in the README file in Experiments/tutorial_tensorflow_husky.
+    </description>
+    <tags>husky tutorial robotics tensorflow braitenberg holodeck</tags>
+    <timeout>86400</timeout>
+    <configuration type="3d-settings" src="TensorFlowTutorial.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="TensorFlowTutorial.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="codejam_2017_tensorflow_world/tensorflow_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="TensorFlowTutorial.bibi"/>
+    <cameraPose>
+      <cameraPosition x="3.25" y="4.75" z="4.25"/>
+      <cameraLookAt x="0" y="0" z="0.5"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck iCub mockup experiment with Retina embedding</name>
+    <thumbnail>ExDRetinaICubMockup.png</thumbnail>
+    <description>In this experiment the iCub robot sends visual input to a retina model.
+    </description>
+    <tags>icub retina robotics holodeck</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDRetinaICubMockup.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDRetinaICubMockup.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room_tracking_icub.sdf">
+      <robotPose x="0.0" y="1.5" z="0.644" roll="0.0" pitch="0.0" yaw="-1.570796"/>
+    </environmentModel>
+    <bibiConf src="visual_tracking_icub_retina_mockup.bibi"/>
+    <cameraPose>
+      <cameraPosition x="1.4" y="2.15" z="1.0"/>
+      <cameraLookAt x="0.0" y="1.48" z="0.8"/>
+    </cameraPose>
+  </ExD>
+
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck Husky Braitenberg experiment</name>
+    <thumbnail>ExDXMLExample.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics in the Holodeck
+      environment.
+      If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. Then,
+      the robot will move towards the colored object. In this experiment, the user can interact
+      and change the color of both screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky robotics holodeck braitenberg</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2_python_tf.bibi"/>
+    <cameraPose>
+      <cameraPosition x="5.056825994369357" y="-1.0210998541555323" z="2.697598759953974"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template Lauron in empty environment</name>
+    <thumbnail>ExDTemplateLauron.jpg</thumbnail>
+    <description>This experiment loads the Lauron robot in an empty world, with an idle brain and
+      basic transfer functions. You are free to edit it.
+    </description>
+    <tags>lauron template docked robotics empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplateLauron.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateLauron.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="1" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="template_lauron.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>iCub Visual Tracking experiment</name>
+    <thumbnail>ExDVisualTrackingICub.jpg</thumbnail>
+    <description>In this experiment the iCub robot performs a Visual Tracking task in the virtual
+      room environment.
+    </description>
+    <tags>icub robotics visual virtualroom</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDVisualTrackingICub.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDVisualTrackingICub.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room_tracking_icub.sdf">
+      <robotPose x="0.0" y="0.0" z="0.644" roll="0.0" pitch="0.0" yaw="-1.570796"/>
+    </environmentModel>
+    <bibiConf src="visual_tracking_icub.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0.0" y="1.48" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Mouse demo experiment in biology lab</name>
+    <thumbnail>ExDMouseLabExample.jpg</thumbnail>
+    <description>This demo shows how to manipulate the environment from a state machine.
+      Objects are created during the experiment and change the behaviour of the mouse.
+    </description>
+    <tags>mouse demo braitenberg biological holodeck</tags>
+    <timeout>210</timeout>
+    <configuration type="3d-settings" src="ExDMouseLabExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDMouseLabExample.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="biologylab_world/biologylab.sdf">
+      <robotPose x="-1.0" y="-2.0" z="1.135" roll="0.0" pitch="-0.0" yaw="1.58692500941"/>
+    </environmentModel>
+    <visualModel src="mouse_v2_model/meshes/mouse_v2_model_animated.dae" scale="0.01">
+      <visualPose x="-0.895" y="-1.9975" z="1.115" roll="0.0" pitch="-0.0" yaw="1.5708"/>
+    </visualModel>
+    <bibiConf src="ExDMouseLabExample.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="SMACH_Example"
+        src="mouse_smach_state.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="-1.02" y="-1.7" z="1.35"/>
+      <cameraLookAt x="-0.3" y="-2.1" z="1.15"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky with neuronal red detection in holodeck</name>
+    <thumbnail>NeuronalRedDetection_Husky.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics and the virtual room
+      environment. If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. The
+      color detection is done with a neuronal image recognition. Then, the robot will move towards
+      the colored object. In this experiment, the user can interact and change the color of both
+      screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky holodeck braitenberg neural detection</tags>
+    <timeout>1680</timeout>
+    <configuration type="3d-settings" src="NeuronalRedDetection_Husky.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="NeuronalRedDetection_Husky.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="neuronalRedDetection.bibi"/>
+    <cameraPose>
+      <cameraPosition x="5.056825994369357" y="-1.0210998541555323" z="2.697598759953974"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Mouse Braitenberg experiment</name>
+    <thumbnail>ExDBraitenbergMouse.jpg</thumbnail>
+    <description>This experiment loads the soft-skin mouse model in a virtual lab environment. If
+      the user starts the experiment, the mouse will stay still, until its eyes detect a red color
+      on one screen. Then, the mouse will move the head towards the colored object. In this
+      experiment, the user can interact and change the color of both screens by clicking on them
+      with the right mouse button.
+    </description>
+    <tags>mouse biological visual braitenberg empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDBraitenbergMouse.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDBraitenbergMouse.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="mouse_ymaze_world/mouse_lab.sdf">
+      <robotPose x="0.0" y="0.0" z="-1.5" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <visualModel src="mouse_v1_model/meshes/mouse_v1_model_animated.dae">
+      <visualPose x="0.0" y="5.0" z="-2.62" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </visualModel>
+    <bibiConf src="braitenberg_mouse.bibi"/>
+    <cameraPose>
+      <cameraPosition x="15.0" y="4.0" z="12.0"/>
+      <cameraLookAt x="0.0" y="-7.0" z="-3.0"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>CDP1 Mouse experiment - Tactile feedback</name>
+    <thumbnail>ExDMouseCDP1.jpg</thumbnail>
+    <description>CDP-1 mouse experiment MVP with tactile feedback</description>
+    <timeout>1000000000</timeout>
+    <configuration type="3d-settings" src="ExDMouseCDP1.ini"/>
+    <configuration type="brainvisualizer" src="MouseCDP1NeuronCoords.json"/>
+    <maturity>development</maturity>
+    <environmentModel src="cdp1_world/cdp1_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.0" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="MouseCDP1.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="MouseCDP1Control_SMACH"
+        src="MouseCDP1Control.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="0.20881767737668355" y="-0.26" z="0.07452707557551946"/>
+      <cameraLookAt x="-0.527092211" y="0.839239426" z="-0.133607597"/>
+    </cameraPose>
+    <physicsEngine>opensim</physicsEngine>
+    <gzbridgesettings>
+      <pose_update_delta_translation>1.e-12</pose_update_delta_translation>
+      <pose_update_delta_rotation>1.e-12</pose_update_delta_rotation>
+      <pose_update_early_threshold>0.02</pose_update_early_threshold>
+    </gzbridgesettings>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck hollie Arm Reinforcement-Learning for target reaching</name>
+    <thumbnail>ExDManipulationRL.jpg</thumbnail>
+    <description>
+      A simple learning experiment with a Gaussian-shaped input population encoding the current
+      position of a single arm axis which is connected via a dopamine regulated STDP synapse to two
+      motor neurons. The absolute error between current joint and target angle determines the
+      dopamine level. Random motor babbling helps the learning mechanism to explore the joint space
+      and to correlate input and output layer.
+    </description>
+    <tags>robotics hollie hand finger sdtp holodeck reinforcement learning</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDManipulationRL.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDManipulationRL.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.025" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="manipulation_reinforcement_learning.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-1.05711" y="2.06968" z="2.08684"/>
+      <cameraLookAt x="0.0" y="0.231642" z="1.199802"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>New experiment</name>
+    <thumbnail>TemplateNew.jpg</thumbnail>
+    <description>This new experiment is based on the models that you have selected. You are free to
+      edit the description.
+    </description>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="3d-settings" src="TemplateNew.ini"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="TemplateNew.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck template iCub</name>
+    <thumbnail>ExDTemplateICubHolodeck.jpg</thumbnail>
+    <description>This experiment loads the iCub robot in the holodeck, with an idle brain and basic
+      transfer functions. You are free to edit it.
+    </description>
+    <tags>icub robotics holodeck template</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplateICubHolodeck.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateICubHolodeck.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_virtuallab/empty_virtuallab.sdf">
+      <robotPose x="1.929" y="0.286" z="0.949" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="template_icub.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.82578462912139" y="-1.3670388948566252" z="1.6209022560153437"/>
+      <cameraLookAt x="1.929" y="0.286" z="1.0"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>WP2 featuring experiment</name>
+    <thumbnail>Images/Conjoint.jpg</thumbnail>
+    <description>This experiment demonstrates the flexibility of the WP2 visual system by running
+      many of its model all together in a meaningful task. The robot has to follow the visual
+      stimulus with its eyes, and identify the target after the square flanker is segmented out.
+    </description>
+    <timeout>100000</timeout> <!-- units = seconds (28 hours 46 minutes 40 seconds) -->
+    <configuration type="3d-settings" src="Conjoint.3ds"/>
+    <!-- <configuration type="brainvisualizer" src="neuronPositions.json"/> not working properly yet -->
+    <maturity>production</maturity>
+    <environmentModel src="crowding_virtuallab/moving_square_virtuallab.sdf">
+      <robotPose x="-8.59" y="-1.435" z="1.582" ux="0.0" uy="0.0" uz="0.0" theta="1.0"/>
+    </environmentModel>
+    <bibiConf src="Conjoint.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine" id="StimulusDisplayMachine"
+        src="StateMachines/displayStimuli.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="2.1" y="1.2" z="1.3"/>
+      <cameraLookAt x="0.0" y="1.5" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template iCub in empty environment</name>
+    <thumbnail>ExDTemplateICub.jpg</thumbnail>
+    <description>This experiment loads the iCub robot in an empty world, with an idle brain and
+      basic transfer functions. You are free to edit it.
+    </description>
+    <tags>icub robotics template empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="config/ExDTemplateICub.ini"/>
+    <configuration type="brainvisualizer" src="config/brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="config/ExDTemplateICub.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.8" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="config/template_icub.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky labyrinth demo experiment in the SpaceBotCup 2013 arena</name>
+    <thumbnail>ExDDemoHuskySBC.jpg</thumbnail>
+    <description>In this experiment the robot will find his path in a labyrinth by following red
+      lights.
+    </description>
+    <tags>husky robotics maze labyrinth spacebotcup demo</tags>
+    <timeout>210</timeout>
+    <configuration type="3d-settings" src="ExDDemoHuskySBC.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDDemoHuskySBC.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="spacebotcup_world_labyrinth/spacebotcup_world.sdf">
+      <robotPose x="1.33815" y="-2.07915" z="1.08401" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="milestone2.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="HuskyAwareLabScreenControlling"
+        src="demo_husky_switch_screen.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="11.090271978222098" y="-0.5979270020610832" z="9.025477327075356"/>
+      <cameraLookAt x="1.33815" y="-2.07915" z="1.08401"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ExDConfFile.xsd">
+    <name>Mouse Braitenberg experiment in biology lab</name>
+    <thumbnail>ExDBraitenbergMouseLab.jpg</thumbnail>
+    <description>This experiment loads the soft-skin mouse model in a biology lab environment. If
+      the user starts the experiment, the mouse will stay still, until its eyes detect a red color
+      on one screen. Then, the mouse will move the head towards the colored object. In this
+      experiment, the user can interact and change the color of both screens by clicking on them
+      with the right mouse button.
+    </description>
+    <tags>mouse biological visual braitenberg biologylab</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDBraitenbergMouseLab.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDBraitenbergMouseLab.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="biologylab_world/biologylab.sdf">
+      <robotPose x="-1.0" y="-2.0" z="1.135" roll="0.0" pitch="-0.0" yaw="1.58692500941"/>
+    </environmentModel>
+    <visualModel src="mouse_v2_model/meshes/mouse_v2_model_animated.dae" scale="0.01">
+      <visualPose x="-0.895" y="-1.9975" z="1.115" roll="0.0" pitch="-0.0" yaw="1.5708"/>
+    </visualModel>
+    <bibiConf src="braitenberg_mouse_lab.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-1.2" y="-1.7" z="1.4"/>
+      <cameraLookAt x="-1.0" y="-2.0" z="1.15"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ExDConfFile.xsd">
+    <name>Dynamic Vision Sensor (DVS) simulation</name>
+    <thumbnail>ExDDvsRobotHead.jpg</thumbnail>
+    <description>This experiment contains the NST robotic head equipped with two
+      simulated Dynamic Vision Sensors (DVS, or silicon retina).
+    </description>
+    <tags>dynamic dvs vision robotics virtualroom</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDDvsRobotHead.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="tracking_world/tracking_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.0" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="DVSRobotHead.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>CDP1 Mouse experiment</name>
+    <thumbnail>ExDMouseCDP1.jpg</thumbnail>
+    <description>CDP-1 mouse experiment MVP</description>
+    <tags>mouse biological cdp1 msled empty</tags>
+    <timeout>1000000000</timeout>
+    <configuration type="3d-settings" src="ExDMouseCDP1.ini"/>
+    <configuration type="brainvisualizer" src="MouseCDP1NeuronCoords.json"/>
+    <configuration type="user-interaction-settings" src="ExDMouseCDP1.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="cdp1_world/cdp1_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.0" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="MouseCDP1.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="MouseCDP1Control_SMACH"
+        src="MouseCDP1Control.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="0.20881767737668355" y="-0.26" z="0.07452707557551946"/>
+      <cameraLookAt x="-0.527092211" y="0.839239426" z="-0.133607597"/>
+    </cameraPose>
+    <physicsEngine>opensim</physicsEngine>
+    <gzbridgesettings>
+      <pose_update_delta_translation>1.e-12</pose_update_delta_translation>
+      <pose_update_delta_rotation>1.e-12</pose_update_delta_rotation>
+      <pose_update_early_threshold>0.02</pose_update_early_threshold>
+    </gzbridgesettings>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template docked Lauron in empty environment</name>
+    <thumbnail>ExDTemplateDockedLauron.jpg</thumbnail>
+    <description>This experiment loads the Lauron robot from a docker container in an empty world,
+      with an idle brain and basic transfer functions. You are free to edit it.
+    </description>
+    <tags>lauron template docked lauron empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplateDockedLauron.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateDockedLauron.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="1" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="docked_template_lauron.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template Husky timeouted experiment</name>
+    <thumbnail>ExDTemplateHuskyTimeout.jpg</thumbnail>
+    <description>Test experiment for timeout testing.</description>
+    <tags>template husky robotics timeout</tags>
+    <timeout>120</timeout>
+    <configuration type="3d-settings" src="ExDTemplateHuskyTimeout.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplateHuskyTimeout.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="template_husky.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck Husky Braitenberg experiment with asynchronous SpiNNaker</name>
+    <thumbnail>ExDSpiNNakerExample.jpg</thumbnail>
+    <description>This is a SpiNNaker experiment that utilizes the live input/output of spikes
+    </description>
+    <tags>holodeck Husky braitenberg spinnaker robotics</tags>
+    <timeout>6000</timeout>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="1.0" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="asynchronous_spinnaker.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck iCub Visual Tracking experiment with Retina &amp; RG opponency</name>
+    <thumbnail>ExDRetinaICubTrackingRG.png</thumbnail>
+    <description>In this experiment the iCub robot performs a Visual Tracking task in the holodeck
+      exploiting Red-Green color opponency.
+    </description>
+    <tags>holodeck icub visual tracking retina</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDRetinaICubTrackingRG.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDRetinaICubTrackingRG.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room_tracking_icub.sdf">
+      <robotPose x="0.0" y="1.5" z="0.644" roll="0.0" pitch="0.0" yaw="-1.570796"/>
+    </environmentModel>
+    <bibiConf src="visual_tracking_icub_retina_tracking_rg.bibi"/>
+    <cameraPose>
+      <cameraPosition x="1.4" y="2.15" z="1.0"/>
+      <cameraLookAt x="0.0" y="1.48" z="0.8"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>SpiNNaker MVP I</name>
+    <thumbnail>ExDSpiNNakerExample.jpg</thumbnail>
+    <description>This is an MVP of the spinnaker integration, demonstrating spike recorders and
+      leaky integrators
+    </description>
+    <tags>holodeck Husky braitenberg spinnaker robotics</tags>
+    <timeout>6000</timeout>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="1.0" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="spinnaker_mvp_i.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment with distributed brain (Nest only)</name>
+    <thumbnail>ExDDistributedBrainHuskyHolodeck.png</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics and the virtual room
+      environment. If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. Then,
+      the robot will move towards the colored object. In this experiment, the user can interact
+      and change the color of both screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky robotics distributed braitenberg nest holodeck</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2_python_tf.bibi" processes="2"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ExDConfFile.xsd">
+    <name>Multiple robots tutorial</name>
+    <thumbnail>MultipleRobots.jpg</thumbnail>
+    <description>This experiment contains one iCub robot and two Pioneer 3DX equipped with brain
+      models.
+    </description>
+    <tags>multiple robots tutorial</tags>
+    <timeout>1800</timeout>
+    <configuration type="3d-settings" src="MultipleRobots.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="MultipleRobots.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="multi_robots_environment/multi_robots_environment.sdf">
+      <robotPose x="0.0" y="-0.5" z="0.63" roll="0.0" pitch="0.0" yaw="-1.57079632679"/>
+    </environmentModel>
+    <bibiConf src="MultipleRobots.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.5" y="2.5" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+    <rosLaunch src="robot_description.launch"/>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>HoLLiE hand motion with CPG</name>
+    <thumbnail>ExDManipulation.jpg</thumbnail>
+    <description>This experiment shows a basic implementation of CPG driven motion control for a
+      five-finger robotic hand.
+      The transfer functions implement a simple muscle model.
+    </description>
+    <tags>virtualroom robotics hollie hand finger cpg</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDManipulation.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDManipulation.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.025" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="manipulation.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-1.05711" y="2.06968" z="2.08684"/>
+      <cameraLookAt x="0.0" y="0.231642" z="1.199802"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>CDP4 attention model</name>
+    <thumbnail>cdp4.png</thumbnail>
+    <description>Saliency model from Maastricht in closed-loop.</description>
+    <timeout>86400</timeout>
+    <configuration type="3d-settings" src="cdp4.3ds"/>
+    <maturity>production</maturity>
+
+    <environmentModel src="CDP4_Models/world_fifteen_posters.sdf">
+      <!-- environmentModel src="CDP4_models/world_indoor_2.sdf" -->
+      <robotPose x="0.0" y="-1.0" z="0.0" ux="0.0" uy="0.0" uz="1.0" theta="0.0"/>
+    </environmentModel>
+
+    <!-- environmentModel src="CDP4_models/world_six_posters.sdf" -->
+    <!-- environmentModel src="CDP4_models/world_ten_posters.sdf" -->
+    <!-- environmentModel src="CDP4_models/world_fifteen_posters.sdf" -->
+    <!-- environmentModel src="CDP4_models/world_fifteen_posters_2.sdf" -->
+    <!--
+      <robotPose x="-2.0" y="0.0" z="0.024" ux="0.0" uy="0.0" uz="0.0" theta="0.0"/>
+    </environmentModel>
+    -->
+
+    <bibiConf src="cdp4.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine" id="SaccadeCharacteristics"
+        src="sm/saccade_characteristics_machine.exd"/>
+      <stateMachine xsi:type="SMACHStateMachine" id="ChangePosters"
+        src="sm/change_posters_machine.exd"/>
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangePostersDetect" src="sm/change_posters_machine_detect.exd"/ -->
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangePosters2" src="sm/change_posters_2_machine.exd"/ -->
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangeNatural" src="sm/change_natural_machine.exd"/ -->
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangeNaturalDetect" src="sm/change_natural_machine_detect.exd"/ -->
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="3.25" y="4.75" z="4.25"/>
+      <cameraLookAt x="0" y="0" z="0.5"/>
+    </cameraPose>
+    <rosLaunch src="nrp.launch"/>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>CDP4 attention model</name>
+    <thumbnail>cdp4.png</thumbnail>
+    <description>Saliency model from Maastricht in closed-loop.</description>
+    <timeout>86400</timeout>
+    <configuration type="3d-settings" src="cdp4.3ds"/>
+    <maturity>production</maturity>
+
+    <environmentModel src="CDP4_models/world_indoor.sdf">
+      <!-- environmentModel src="CDP4_models/world_indoor_2.sdf" -->
+      <robotPose x="0.0" y="-1.0" z="0.0" ux="0.0" uy="0.0" uz="1.0" theta="0.0"/>
+    </environmentModel>
+
+    <!-- environmentModel src="CDP4_models/world_six_posters.sdf" -->
+    <!-- environmentModel src="CDP4_models/world_ten_posters.sdf" -->
+    <!-- environmentModel src="CDP4_models/world_fifteen_posters.sdf" -->
+    <!-- environmentModel src="CDP4_models/world_fifteen_posters_2.sdf" -->
+    <!--
+      <robotPose x="-2.0" y="0.0" z="0.024" ux="0.0" uy="0.0" uz="0.0" theta="0.0"/>
+    </environmentModel>
+    -->
+
+    <bibiConf src="cdp4.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine" id="SaccadeCharacteristics"
+        src="sm/saccade_characteristics_machine.exd"/>
+      <stateMachine xsi:type="SMACHStateMachine" id="ChangePosters"
+        src="sm/change_posters_machine.exd"/>
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangePostersDetect" src="sm/change_posters_machine_detect.exd"/ -->
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangePosters2" src="sm/change_posters_2_machine.exd"/ -->
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangeNatural" src="sm/change_natural_machine.exd"/ -->
+      <!-- stateMachine xsi:type="SMACHStateMachine" id="ChangeNaturalDetect" src="sm/change_natural_machine_detect.exd"/ -->
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="3.25" y="4.75" z="4.25"/>
+      <cameraLookAt x="0" y="0" z="0.5"/>
+    </cameraPose>
+    <rosLaunch src="nrp.launch"/>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Benchmark Pioneer P3DX experiment</name>
+    <thumbnail>BenchmarkPioneer.jpg</thumbnail>
+    <description>Benchmark aiming at developing a program that controls a Pioneer 3DX robot to
+      follow a 2m by 2m square path.
+      The metric used to evaluate the robot is applied for 4 separate segments of the path,
+      which correspond to the 4 sides of the square. The final performance is computed averaging the
+      4 segments evaluations.
+      Each segment is defined as a corridor that lies on one edge of the square.
+      For each individual segment, we compute a performance which is based on 3 different
+      parameters:
+      the "path" (how well the robot managed to keep close to the "ideal" route),
+      the "time" needed to go through this segment, and the "distance" to the goal,
+      which is mostly used to evaluate how close to the goal the robot is in the current segment.
+    </description>
+    <tags>benchmark pioneer woodcheckerboard trajectory robotics</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="BenchmarkPioneer.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="BenchmarkPioneer.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="p3dxbenchmark_world/p3dxbenchmark_world.sdf">
+      <robotPose x="-1.0" y="1.0" z="0.05" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="template_pioneer.bibi"/>
+    <cameraPose>
+      <cameraPosition x="1.8384600722731907" y="-1.6578606691120366" z="1.4069850686414418"/>
+      <cameraLookAt x="0" y="0" z="0.5"/>
+    </cameraPose>
+    <rosLaunch src="robot_description.launch"/>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment with zipped robot</name>
+    <thumbnail>ExDXMLExampleRobotZip.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics from a zip file and
+      the virtual room
+      environment. If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. Then,
+      the robot will move towards the colored object. In this experiment, the user can interact
+      and change the color of both screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky braitenberg robotics zipped virtualroom</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2_python_tf_robotzip.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>NAO experiment</name>
+    <thumbnail>ExDNao.jpg</thumbnail>
+    <description>This experiment loads the humanoid robot NAO (Aldebaran) and the virtual room
+      environment. In the future, it will be possible to connect NAO to a neuronal controller (NEST)
+      to control single joints of the robot.
+    </description>
+    <tags>nao humanoid virtualroom robotics</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="-0.157" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="nao.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+  ﻿
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment with automatically switching screens</name>
+    <thumbnail>ScreenSwitchingHuskyExperiment.jpg</thumbnail>
+    <description>This experiment is similar to the Husky Braitenberg one (Husky robot detecting red
+      colour and driving towards it).
+      In this experiment the right screen is turned red automatically after 20 seconds of
+      simulation time. Also, the robot reaching a red screen triggers on the opposite screen.
+      This is to demonstrate how, using the SMACH state machine script, the user can
+      automate the experiment events.
+    </description>
+    <tags>husky robotics braitenberg virtualroom</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ScreenSwitchingHuskyExperiment.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ScreenSwitchingHuskyExperiment.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="HuskyAwareScreenControlling"
+        src="screen_switching_husky_aware_compatible.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment on SpiNNaker</name>
+    <thumbnail>ExDXMLExample.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics and the virtual room
+      environment. If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. Then,
+      the robot will move towards the colored object. In this experiment, the user can interact
+      and change the color of both screens by clicking on them with the right mouse button. The
+      neural network used in this experiment is SpiNNaker.
+    </description>
+    <tags>husky braitenberg robotics spinnaker virtualroom neuromorphics</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="spinnaker_husky_braitenberg.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment with distributed brain (Nest with MUSIC)</name>
+    <thumbnail>ExDDistributedBrainHuskyMUSICHolodeck.png</thumbnail>
+    <description>WARNING: This experiment has limited functionality, use at your own risk! See the
+      corresponding Nest only experiment for a distributed, more feature complete version.
+    </description>
+    <tags>husky robotics distributed braitenberg music</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2_python_tf.bibi" processes="2"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck Interactive manipulation experiment</name>
+    <thumbnail>ExDManipulation.jpg</thumbnail>
+    <description>This experiment allows user to control Schunk robotic manipulator (arm and hand)
+      using Myo armband and Leap Motion hand tracker using client side ROS nodes in the Holodeck.
+    </description>
+    <tags>holodeck ínteractive robotics hollie hand finger</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDInteractiveManipulation.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.025" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="interactive_manipulation.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-1.05711" y="2.06968" z="2.08684"/>
+      <cameraLookAt x="0.0" y="0.231642" z="1.199802"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Force based joint control</name>
+    <thumbnail>ExDManipulationForce.jpg</thumbnail>
+    <description>The experiment shows a simple example of force based spiking interface for a Schunk
+      SVH robotic hand. Two joints of the index finger are being controlled by two motor neurons
+      (antagonist and synergist) to reach a desired position, which is adjustable in the transfer
+      function. A simple muscle model converts activation dynamics to joint efforts and applies them
+      in a physics simulator. The rest of the 8 joints (2 for each finger) are maintaining zero
+      positions with traditional PID controllers and do not move at all. The experiment demonstrates
+      one of the possible mechanisms for implementing force based control using existing Gazebo/ROS
+      NRP platform architecture, opening the path to more complex muscle model simulations in the
+      future.
+    </description>
+    <tags>virtualroom robotics schunk hand finger force joint</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDManipulationForce.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDManipulationForce.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.025" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="manipulation_force.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="IndexFingerForceControl"
+        src="manipulation_arm_robot_force.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="-1.05711" y="2.06968" z="2.08684"/>
+      <cameraLookAt x="0.0" y="0.231642" z="1.199802"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Empty Template Mouse v2 experiment</name>
+    <thumbnail>ExDTemplateMouseV2.jpg</thumbnail>
+    <description>This experiment loads the Mouse in an empty world, with an idle brain and basic
+      transfer functions, as well as a prototype docked robot controller. You are free to edit it.
+    </description>
+    <tags>empty template mouse docked biological</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.1" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="template_mousev2.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Holodeck CDP1 Mouse experiment</name>
+    <thumbnail>ExDMouseCDP1.jpg</thumbnail>
+    <description>CDP-1 mouse experiment MVP</description>
+    <tags>mouse biological cdp1 holodeck</tags>
+    <timeout>1000000000</timeout>
+    <configuration type="3d-settings" src="holodeck.ini"/>
+    <configuration type="brainvisualizer" src="MouseCDP1NeuronCoords.json"/>
+    <configuration type="user-interaction-settings" src="holodeck.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="cdp1_world/cdp1_world_holodeck.sdf">
+      <robotPose x="1.51587" y="-1.0442" z="1.3375" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="MouseCDP1.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="MouseCDP1Control_SMACH"
+        src="MouseCDP1Control.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="1.650596943953666" y="-1.3037450422457924" z="1.3963657402299325 "/>
+      <cameraLookAt x="1.51587" y="-1.0442" z="1.33757"/>
+    </cameraPose>
+    <physicsEngine>opensim</physicsEngine>
+    <gzbridgesettings>
+      <pose_update_delta_translation>1.e-12</pose_update_delta_translation>
+      <pose_update_delta_rotation>1.e-12</pose_update_delta_rotation>
+      <pose_update_early_threshold>0.02</pose_update_early_threshold>
+    </gzbridgesettings>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment</name>
+    <thumbnail>ExDXMLExample.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics and the virtual room
+      environment. If the user starts the experiment, the Braitenberg vehicle network is executed
+      and the robot will turn around itself in place, until the camera detects a red color. Then,
+      the robot will move towards the colored object. In this experiment, the user can interact
+      and change the color of both screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky robotics braitenberg virtualroom</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDXMLExample.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDXMLExample.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room_lausanne/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="milestone2_python_tf.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>HoLLie arm manipulation demo experiment</name>
+    <thumbnail>ExDDemoManipulation.jpg</thumbnail>
+    <description>
+      The experiment shows the HoLLie arm performing an infinite grasping task controlled by a SMACH
+      state machine.
+      The robot clears the table of the two cylindrical objects placed on it, disposing of them in
+      the container beside.
+    </description>
+    <tags>hollie arm manipulation demo empty robotics</tags>
+    <timeout>180</timeout>
+    <configuration type="3d-settings" src="ExDDemoManipulation.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDDemoManipulation.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/world_manipulation.sdf">
+      <robotPose x="0.0" y="0.0" z="0.04" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="manipulation_demo.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="ArmBehavior"
+        src="manipulation_demo.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="0.84782" y="-2.38183" z="2.4"/>
+      <cameraLookAt x="0" y="0" z="1"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>SpiNNaker MVP II</name>
+    <thumbnail>ExDSpiNNakerExample.jpg</thumbnail>
+    <description>This is an MVP of the spinnaker integration, demonstrating spike recorders and
+      spike injectors
+    </description>
+    <tags>holodeck Husky braitenberg spinnaker robotics</tags>
+    <timeout>6000</timeout>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="1.0" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="spinnaker_mvp_ii.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Roboy experiment</name>
+    <thumbnail>roboy.jpg</thumbnail>
+    <description>This experiment loads the anthropomimetic robot Roboy into the SpaceBotCup Arena.
+      In the future, muscle simulations will be added which then can be controlled by a neural
+      network (NEST).
+    </description>
+    <tags>roboy robotics spacebotcup</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <environmentModel src="spacebotcup_world/spacebotcup_world.sdf">
+      <robotPose x="0.0" y="0.0" z="-0.157" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="roboy.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>iCub VOR UGR</name>
+    <thumbnail>ExDiCub_VOR_UGR.png</thumbnail>
+    <description>This experiment of the University of Granada (UGR) is a VOR experiment using a
+      spiking cerebellar model and an iCub robot.
+    </description>
+    <tags>icub robotics visual holodeck</tags>
+    <timeout>86400</timeout>
+    <configuration type="3d-settings" src="ExDiCub_VOR_UGR.3ds"/>
+    <maturity>production</maturity>
+    <environmentModel src="virtual_room_lausanne/vor_environment.sdf">
+      <robotPose x="0.0" y="0.0" z="0.644" ux="0.0" uy="0.0" uz="-0.70710666564709435"
+        theta="0.70710689672598181"/>
+    </environmentModel>
+    <bibiConf src="bibi_configuration.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0.0" y="1.48" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>LAURON V Braitenberg experiment</name>
+    <thumbnail>ExDBraitenbergLauron.jpg</thumbnail>
+    <description>This experiment loads the six-legged walking robot LAURON V (developed at FZI) and
+      the virtual room environment. If the user starts the experiment, the Braitenberg vehicle
+      network is executed and the robot will turn around itself in place, until the camera detects a
+      red color. Then, the robot will move towards the colored object. In this experiment, the user
+      can interact and change the color of both screens by clicking on them with the right mouse
+      button.
+    </description>
+    <tags>lauron robotics virtualroom braitenberg</tags>
+    <timeout>840</timeout>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDBraitenbergLauron.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.0" roll="0.0" pitch="-0.0" yaw="3.14159265359"/>
+    </environmentModel>
+    <bibiConf src="braitenberg_lauron.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Husky Braitenberg experiment in the SpaceBotCup 2013 arena</name>
+    <thumbnail>ExDBraitenbergHuskySBC.jpg</thumbnail>
+    <description>This experiment loads the Husky robot from Clearpath Robotics and the arena from
+      the SpaceBotCup 2013. If the user starts the experiment, the Braitenberg vehicle network is
+      executed and the robot will turn around itself in place, until the camera detects a red color.
+      Then, the robot will move towards the colored object. In this experiment, the user can
+      interact and change the color of both screens by clicking on them with the right mouse button.
+    </description>
+    <tags>husky robotics spacebotcup braitenberg</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDBraitenbergHuskySBC.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDBraitenbergHuskySBC.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="spacebotcup_world/spacebotcup_world.sdf">
+      <robotPose x="0.0" y="0.0" z="1.0" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="milestone2.bibi"/>
+    <cameraPose>
+      <cameraPosition x="-2.0234778231193573" y="1.2958129048076932" z="2.083016416394317"/>
+      <cameraLookAt x="0" y="0" z="1.24999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ExDConfFile.xsd">
+    <name>Holodeck Mouse Braitenberg experiment</name>
+    <thumbnail>ExDBraitenbergMouseLab.jpg</thumbnail>
+    <description>This experiment loads the soft-skin mouse model in the holodeck biolab environment.
+      If the user starts the experiment, the mouse will stay still, until its eyes detect a red
+      color on one screen. Then, the mouse will move the head towards the colored object. In this
+      experiment, the user can interact and change the color of both screens by clicking on them
+      with the right mouse button.
+    </description>
+    <tags>mouse biological visual holodeck braitenberg</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDBraitenbergMouseLab.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDBraitenbergMouseLab.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="holodeck_biolab/holodeck_biolab.sdf">
+      <robotPose x="1.659" y="-0.851" z="1.319" roll="0.0" pitch="-0.0" yaw="1.58692500941"/>
+    </environmentModel>
+    <visualModel src="mouse_v2_model/meshes/mouse_v2_model_animated.dae" scale="0.01">
+      <visualPose x="1.715" y="-0.851" z="1.319" roll="0.0" pitch="-0.0" yaw="1.5708"/>
+    </visualModel>
+    <bibiConf src="braitenberg_mouse_lab.bibi"/>
+    <cameraPose>
+      <cameraPosition x="1.1421603714651787" y="-1.015793401143827" z="1.7139510542349161"/>
+      <cameraLookAt x="1.659" y="-0.851" z="1.319"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Tigrillo Learning Experiment</name>
+    <thumbnail>ExDTigrillo.png</thumbnail>
+    <description>In this experiment, the quadruped robot Tigrillo uses a target actuation signal
+      optimized previously with CMA-ES to learn how to use proprioceptive knee sensors in a closed
+      loop system. This controller is made of a Liquid State Machine whose outputs are learned with
+      the FORCE update rule and progressively mixed to the target signal until it walks fully in
+      closed-loop.
+    </description>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTigrillo.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTigrillo.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_virtuallab/empty_virtuallab.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="ExDTigrillo.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>The Real Tigrillo Experiment</name>
+    <thumbnail>ExDTigrillo.png</thumbnail>
+    <description>Controlling the real Tigrillo Robot with the NRP.</description>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="TigrilloReal.ini"/>
+    <maturity>development</maturity>
+    <environmentModel src="virtual_room/virtual_room.sdf">
+      <robotPose x="0.0" y="0.0" z="0.0" roll="0.0" pitch="0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="TigrilloReal.bibi"/>
+    <cameraPose>
+      <cameraPosition x="2.1504202465717563" y="1.2381462778435453" z="1.3380507195673994"/>
+      <cameraLookAt x="0" y="0" z="0.49999"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>User Avatar - Test Environment</name>
+    <thumbnail>user-avatar-thumbnail.jpg</thumbnail>
+    <description>This is a test environment for implementations of user avatars.
+    </description>
+    <tags>avatar user test</tags>
+    <timeout>9999</timeout>
+    <configuration type="3d-settings" src="user-avatar_test-env.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="user-avatar_test-env.uis"/>
+    <maturity>development</maturity>
+    <environmentModel src="empty_virtuallab/empty_virtuallab.sdf">
+      <robotPose x="1.929" y="0.286" z="0.949" roll="0.0" pitch="-0.0" yaw="2.29524196972"/>
+    </environmentModel>
+    <bibiConf src="user-avatar_test-env.bibi"/>
+    <experimentControl>
+      <stateMachine xsi:type="SMACHStateMachine"
+        id="AvatarTests"
+        src="avatar_tests.exd"/>
+    </experimentControl>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>Template Pioneer P3DX in empty environment</name>
+    <thumbnail>ExDTemplatePioneer.jpg</thumbnail>
+    <description>This experiment loads the Pioneer P3DX robot in an empty world, with an idle brain
+      and basic transfer functions. You are free to edit it.
+    </description>
+    <tags>pioneer robotics template empty</tags>
+    <timeout>840</timeout>
+    <configuration type="3d-settings" src="ExDTemplatePioneer.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="ExDTemplatePioneer.uis"/>
+    <maturity>production</maturity>
+    <environmentModel src="empty_world/empty_world.sdf">
+      <robotPose x="0.0" y="0.0" z="0.5" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+    <bibiConf src="template_pioneer.bibi"/>
+    <cameraPose>
+      <cameraPosition x="4.5" y="0" z="1.8"/>
+      <cameraLookAt x="0" y="0" z="0.6"/>
+    </cameraPose>
+    <rosLaunch src="robot_description.launch"/>
+  </ExD>
+
+  <ExD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig"
+    xsi:schemaLocation="http://schemas.humanbrainproject.eu/SP10/2014/ExDConfig ../ExDConfFile.xsd">
+    <name>1 DOF Myorobotics Arm for WP4 Cerebellum Experiment</name>
+    <thumbnail>Myo_small.jpg</thumbnail>
+    <description>Loads the 1 DOF Myorobotics Arm into the Holodeck. Muscles can be controlled via
+      ROS messages.
+    </description>
+    <timeout>1000000000</timeout>
+    <configuration type="3d-settings" src="holodeck.ini"/>
+    <configuration type="brainvisualizer" src="brainvisualizer.json"/>
+    <configuration type="user-interaction-settings" src="holodeck.uis"/>
+
+    <maturity>development</maturity>
+    <environmentModel src="cdp1_world/cdp1_world_holodeck.sdf">
+      <robotPose x="-1" y="-4.0" z="0.1" roll="0.0" pitch="-0.0" yaw="0.0"/>
+    </environmentModel>
+
+    <bibiConf src="Myo_small.bibi"/>
+
+    <cameraPose>
+      <cameraPosition x="1.650596943953666" y="-1.3037450422457924" z="1.563657402299325 "/>
+      <cameraLookAt x="1.51587" y="-1.0442" z="1.33757"/>
+    </cameraPose>
+
+    <physicsEngine>opensim</physicsEngine>
+    <gzbridgesettings>
+      <pose_update_delta_translation>1.e-12</pose_update_delta_translation>
+      <pose_update_delta_rotation>1.e-12</pose_update_delta_rotation>
+      <pose_update_early_threshold>0.02</pose_update_early_threshold>
+    </gzbridgesettings>
+  </ExD>
+
+</experiment-list>
